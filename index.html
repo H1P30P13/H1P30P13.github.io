@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
+  <header class="nav window">
     <a class="logo" href="#top">YN</a>
     <nav>
       <a href="#about">About</a>
@@ -22,37 +22,50 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero-text">
-        <p class="speech">Hi, I'm</p>
-        <h1>Your Name</h1>
-        <p class="tagline">Web developer who builds small, friendly things for the internet.</p>
-        <a class="btn" href="#projects">See my work</a>
+      <div class="floor" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="window hero-text">
+          <p class="speech">Hi, I'm</p>
+          <h1>Your Name</h1>
+          <p class="tagline">Web developer who builds small, friendly things for the internet.</p>
+          <a class="btn" href="#projects">See my work</a>
+        </div>
+        <div class="stage">
+          <div class="scene" aria-hidden="true">
+            <div class="cube">
+              <i class="front"></i><i class="back"></i><i class="right"></i>
+              <i class="left"></i><i class="top"></i><i class="bottom"></i>
+            </div>
+          </div>
+          <button class="sprite-wrap" id="sprite" aria-label="Click the character to make it jump">
+            <svg id="sprite-svg" viewBox="0 0 12 15" shape-rendering="crispEdges" role="img" aria-label="Pixel art character"></svg>
+            <span class="shadow"></span>
+          </button>
+        </div>
       </div>
-      <button class="sprite-wrap" id="sprite" aria-label="Click the character to make it jump">
-        <svg id="sprite-svg" viewBox="0 0 12 15" shape-rendering="crispEdges" role="img" aria-label="Pixel art character"></svg>
-        <span class="shadow"></span>
-      </button>
     </section>
 
-    <section id="about" class="panel">
-      <h2>About</h2>
-      <p>I'm a developer based in Ottawa. I like clear interfaces, tidy code, and projects that feel a little bit playful. Replace this paragraph with your own story.</p>
+    <section id="about">
+      <div class="window">
+        <h2>About</h2>
+        <p>I'm a developer based in Ottawa. I like clear interfaces, tidy code, and projects that feel a little bit playful. Replace this paragraph with your own story.</p>
+      </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2 class="plain">Projects</h2>
       <div class="grid">
-        <article class="card c1">
+        <article class="window card">
           <h3>Project One</h3>
           <p>A short description of what it does and the problem it solves.</p>
           <a href="#">View project</a>
         </article>
-        <article class="card c2">
+        <article class="window card">
           <h3>Project Two</h3>
           <p>Another project. Mention the tools you used and what you learned.</p>
           <a href="#">View project</a>
         </article>
-        <article class="card c3">
+        <article class="window card">
           <h3>Project Three</h3>
           <p>A third project. Link to the live site or the source code.</p>
           <a href="#">View project</a>
@@ -60,28 +73,32 @@
       </div>
     </section>
 
-    <section id="skills" class="panel">
-      <h2>Skills</h2>
-      <ul class="bars">
-        <li><span>HTML &amp; CSS</span><div class="bar" data-level="9"></div></li>
-        <li><span>JavaScript</span><div class="bar" data-level="8"></div></li>
-        <li><span>React</span><div class="bar" data-level="7"></div></li>
-        <li><span>Design</span><div class="bar" data-level="6"></div></li>
-      </ul>
+    <section id="skills">
+      <div class="window">
+        <h2>Skills</h2>
+        <ul class="bars">
+          <li><span>HTML &amp; CSS</span><div class="bar" data-level="9"></div></li>
+          <li><span>JavaScript</span><div class="bar" data-level="8"></div></li>
+          <li><span>React</span><div class="bar" data-level="7"></div></li>
+          <li><span>Design</span><div class="bar" data-level="6"></div></li>
+        </ul>
+      </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p class="contact-line">Want to work together? Say hello.</p>
-      <a class="btn" href="mailto:you@example.com">you@example.com</a>
-      <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
+      <div class="window center">
+        <h2>Contact</h2>
+        <p class="contact-line">Want to work together? Say hello.</p>
+        <a class="btn" href="mailto:you@example.com">you@example.com</a>
+        <div class="links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>Made with pixels. &copy; <span id="year"></span> Your Name</footer>
+  <footer>Made with pixels and polygons. &copy; <span id="year"></span> Your Name</footer>
   <script src="script.js"></script>
 </body>
 </html>
